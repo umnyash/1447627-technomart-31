@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
-* Студент: [Толковый Умняш](https://up.htmlacademy.ru/htmlcss/31/user/1447627).
-* Наставник: `Неизвестно`.
+- Студент: [Толковый Умняш](https://up.htmlacademy.ru/htmlcss/31/user/1447627).
+- Наставник: [Елена Асташина](https://htmlacademy.ru/profile/helen_astashina).
 
 ---
 
