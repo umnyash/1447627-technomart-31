@@ -1,0 +1,19 @@
+.double-price-slider {
+  position: relative;
+  width: 220px;
+  height: 80px;
+}
+
+.min-price-slider {
+  position: absolute;
+  width: 180px;
+  top: 0;
+  left: 20px;
+}
+
+.max-price-slider {
+  position: absolute;
+  width: 180px;
+  top: 0;
+  right: 20px;
+}
