@@ -15,17 +15,11 @@
           <label for="search-field">Поиск:</label>
           <input type="search" name="search-word" id="search-field" placeholder="Поиск:">
         </form>
-        <ul>
-          <li>
-            <a href="#">Закладки: <span>0</span></a>
-          </li>
-          <li>
-            <a href="#">Корзина: <span>0</span></a>
-          </li>
-          <li>
-            <a class="make-an-order" href="#">Оформить заказ</a>
-          </li>
-        </ul>
+        <div>
+          <a href="#">Закладки: <span>0</span></a>
+          <a href="#">Корзина: <span>0</span></a>
+          <a class="make-an-order" href="#">Оформить заказ</a>
+        </div>
       </div>
       <div class="main-header-middle">
         <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
@@ -129,7 +123,7 @@
               </li>
             </ul>
           </fieldset>
-          <input type="submit" value="Показать">
+          <button type="submit">Показать</button>
         </form>
       </section>
       <section>
@@ -140,8 +134,9 @@
           <li><button type="button">По функционалу</button></li>
         </ul>
         <ul>
-          <li><button type="button"></button></li>
-          <li><button type="button"></button></li>
+          <!-- Я подумал, что нехорошо, оставлять кнопки совсем без текста. Потом, если что как-нибудь добавлю поясняющую метку, или спрячу текст, например обнулив размер шрифта... -->
+          <li><button type="button">По возрастанию</button></li>
+          <li><button type="button">По убыванию</button></li>
         </ul>
       </section>
       <section>

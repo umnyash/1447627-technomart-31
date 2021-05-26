@@ -15,17 +15,11 @@
           <label for="search-field">Поиск:</label>
           <input type="search" name="search-word" id="search-field" placeholder="Поиск:">
         </form>
-        <ul>
-          <li>
-            <a href="#">Закладки: <span>0</span></a>
-          </li>
-          <li>
-            <a href="#">Корзина: <span>0</span></a>
-          </li>
-          <li>
-            <a class="make-an-order" href="#">Оформить заказ</a>
-          </li>
-        </ul>
+        <div>
+          <a href="#">Закладки: <span>0</span></a>
+          <a href="#">Корзина: <span>0</span></a>
+          <a class="make-an-order" href="#">Оформить заказ</a>
+        </div>
       </div>
       <div class="main-header-middle">
         <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
@@ -183,7 +177,7 @@
           </li>
           <li>
             <a href="#">
-              <img src="https://via.placeholder.com/150x100" width="151" height="98" alt="AEG.">
+              <img src="https://via.placeholder.com/150x100" width="151" height="98" alt="AEG">
             </a>
           </li>
           <li>
@@ -196,38 +190,25 @@
       <section class="services">
         <h2>Сервисы</h2>
         <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+        <div>
+          <button type="button">Доставка</button>
+          <button type="button">Гарантия</button>
+          <button type="button">Кредит</button>
+        </div>
         <ul>
           <li>
-            <label>
-              <input type="radio" name="service-name" value="delivery" checked> Доставка
-            </label>
+            <h3>Доставка</h3>
+            <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
           </li>
           <li>
-            <label>
-              <input type="radio" name="service-name" value="guarantee"> Гарантия
-            </label>
+            <h3>Гарантия</h3>
+            <p>(текст про гарантию)</p>
           </li>
           <li>
-            <label>
-              <input type="radio" name="service-name" value="credit"> Кредит
-            </label>
+            <h3>Кредит</h3>
+            <p>(текст про кредит)</p>
           </li>
         </ul>
-        <dl>
-          <div>
-            <dt>Доставка</dt>
-            <dd>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо
-              заработаем, поднимая его на ваш этаж!</dd>
-          </div>
-          <div>
-            <dt>Гарантия</dt>
-            <dd>(текст про гарантию)</dd>
-          </div>
-          <div>
-            <dt>Кредит</dt>
-            <dd>(текст про кредит)</dd>
-          </div>
-        </dl>
       </section>
       <section class="about-us">
         <h2>Компания «Техномарт»</h2>
@@ -298,21 +279,21 @@
       <h2>Напишите нам!</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
         <p>
-          <label> Ваше имя:
+          <label>Ваше имя:
             <input type="text" name="user-name" placeholder="Имя Фамилия">
           </label>
         </p>
         <p>
-          <label> Ваш e-mail:
+          <label>Ваш e-mail:
             <input type="email" name="user-email" placeholder="email@example.com" required>
           </label>
         </p>
         <p>
-          <label> Текст письма:
+          <label>Текст письма:
             <textarea name="user-message" placeholder="В свободной форме" required></textarea>
           </label>
         </p>
-        <input type="submit" value="Отправить">
+        <button type="submit">Отправить</button>
       </form>
       <button type="button">Закрыть</button>
     </section>
