@@ -46,6 +46,548 @@
     url("../fonts/ptsansbold.woff") format("woff");
 }
 
+:root {
+  --basic-white: #ffffff;
+  --basic-white-50: rgba(255, 255, 255, 0.5);
+  --basic-white-30: rgba(255, 255, 255, 0.3);
+  --basic-grey-white: #f4f4f4;
+  --basic-grey-extra-light: #f1f1f1;
+  --basic-grey-light: #c5c5c5;
+  --basic-grey-light-30: rgba(197, 197, 197, 0.3);
+  --basic-grey: #b5b5b5;
+  --basic-grey-dark: #a9a9a9;
+  --basic-grey-dark-30: rgba(169, 169, 169, 0.3);
+  --basic-sapphire-white: #f1f5f7;
+  --basic-sapphire-light: #3d546f;
+  --basic-sapphire: #32425c;
+  --basic-sapphire-dark: #293449;
+  --basic-sapphire-extra-dark: #1d2739;
+  --basic-sapphire-black: #161d29;
+  --basic-blue: #3bbce3;
+  --basic-red: #ee3643;
+  --basic-red-dark: #ca2c37;
+  --basic-red-extra-dark: #ba2732;
+  --basic-green-light: #8ed78f;
+  --basic-green-pale: #63a63e;
+  --basic-green: #5fbb2d;
+  --basic-green-dark: #518534;
+  --basic-green-extra-dark: #367315;
+  --basic-yellow-pale: #ffd180;
+  --basic-yellow: #ffbf47;
+  --basic-violet: #dc91d8;
+  --basic-orange-white: #f9f5f0;
+  --basic-black: #000000;
+  --basic-black-40: rgba(0, 0, 0, 0.4);
+  --basic-black-30: rgba(0, 0, 0, 0.3);
+  --basic-black-24: rgba(0, 0, 0, 0.24);
+  --basic-black-15: rgba(0, 0, 0, 0.15);
+}
+
+.page-body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.page-body h2,
+.servises-list-item h3 {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* Красная кнопка и похожие на неё, в том числе стикер. */
+.page-body .btn,
+.page-body .sticker-new {
+  border: none;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--basic-white);
+  text-decoration: none;
+  background-color: var(--basic-red);
+}
+
+.page-body .btn:hover {
+  background-color: var(--basic-red-dark);
+}
+
+.page-body .btn:focus,
+.page-body .btn:active {
+  background-color: var(--basic-red-extra-dark);
+}
+
+/* Шапка. */
+
+.main-header {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--basic-sapphire);
+  background-color: var(--basic-sapphire-white);
+}
+
+/* Верхняя часть шапки. */
+
+.main-header-top {
+  font-size: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-sapphire-dark);
+}
+
+.search-form input {
+  border: none;
+  font: inherit;
+  color: inherit;
+  background: inherit;
+}
+
+.search-form input::placeholder {
+  opacity: 1;
+}
+
+.search-form input:focus {
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+.main-header-top a,
+.main-navigation a {
+  color: var(--basic-white);
+  text-decoration: none;
+}
+
+.main-header-top .bookmarks:focus,
+.main-header-top .bookmarks:active,
+.main-header-top .cart:focus,
+.main-header-top .cart:active {
+  color: var(--basic-white-50);
+  background-color: var(--basic-sapphire-black);
+}
+
+.main-header-top .make-an-order {
+  background-color: var(--basic-green-pale);
+}
+
+.main-header-top .make-an-order:hover {
+  background-color: var(--basic-green);
+}
+
+.main-header-top .make-an-order:focus,
+.main-header-top .make-an-order:active {
+  color: var(--basic-white-50);
+  background-color: var(--basic-green-pale);
+}
+
+/* Серединная часть шапки. */
+
+.main-header-middle .description {
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--basic-red);
+}
+
+.main-header-middle .main-header-phone {
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--basic-red);
+  text-decoration: none;
+}
+
+.authorization a {
+  font-size: 21px;
+  line-height: 21px;
+  text-align: center;
+  vertical-align: middle;
+  color: var(--basic-black);
+  text-decoration: none;
+}
+
+.authorization a:hover {
+  color: var(--basic-red);
+}
+
+.authorization a:focus,
+.authorization a:active {
+  color: var(--basic-grey-light);
+}
+
+/* Нижняя часть шапки. */
+
+.site-navigation {
+  list-style: none;
+  font-size: 18px;
+  background-color: var(--basic-sapphire);
+}
+
+.site-navigation a:hover {
+  background-color: var(--basic-sapphire-dark);
+}
+
+.site-navigation a:focus,
+.site-navigation a:active {
+  color: var(--basic-white-50);
+  background-color: var(--basic-sapphire-extra-dark);
+}
+
+/* Промоблок. */
+
+.promo {
+  font-family: "Cuprum", "Arial", sans-serif;
+}
+
+.promo .pop-sections-list {
+  list-style: none;
+  color: var(--basic-white);
+}
+
+.pop-sections-item h3 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.pop-sections-item > .btn {
+  background-color: var(--basic-white-30);
+}
+
+.pop-sections-item > .btn:hover {
+  background-color: var(--basic-grey-light-30);
+}
+
+.pop-sections-item > .btn:focus,
+.pop-sections-item > .btn:active {
+  background-color: var(--basic-grey-dark-30);
+}
+
+.pop-sections-item.materials,
+.pop-sections-item.delivery {
+  background-color: var(--basic-yellow);
+}
+
+.pop-sections-item.tool {
+  background-color: var(--basic-blue);
+}
+
+.pop-sections-item.technics {
+  background-color: var(--basic-violet);
+}
+
+.pop-sections-item.discount {
+  background-color: var(--basic-green-light);
+}
+
+.pop-sections-item .sticker-new {
+  background-color: var(--basic-red);
+}
+
+/* Слайдер в промо-блоке. */
+
+.pop-goods-slider-item h3 {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.pop-goods-slider-item p {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.pop-goods-slider-item.perforators {
+  background-color: var(--basic-black);
+  background-image: url(../img/perforators-promo-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.pop-goods-slider-item.drills {
+  background-color: var(--basic-black);
+  background-image: url(../img/drills-promo-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Такая шапка с бледно=оранжевым фоном есть у двух секций. */
+
+.section-header {
+  background-color: var(--basic-orange-white);
+}
+
+.section-header h2,
+.servises-list-item h3 {
+  color: var(--basic-sapphire);
+}
+
+/* Популярные товары (4 перфоратора). */
+
+.pop-goods-list {
+  list-style: none;
+}
+
+.pop-goods-list-item .link-title {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+}
+
+.pop-goods-list-item .prices {
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.pop-goods-list-item .old-price {
+  color: var(--basic-grey-dark);
+  text-decoration: line-through;
+}
+
+.pop-goods-list-item .new-price {
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+
+/* Блок с кнопками который должен появляться при наведении. */
+
+.pop-goods-list-item .actions-with-goods {
+  background-color: var(--basic-white);
+}
+
+.pop-goods-list-item .btn-buy {
+  border-radius: 2px;
+  background-color: var(--basic-green-pale);
+  box-shadow: inset 0px -3px 0px var(--basic-green-extra-dark);
+}
+
+.pop-goods-list-item .btn-buy:hover {
+  background-color: var(--basic-green);
+}
+
+.pop-goods-list-item .btn-buy:focus,
+.pop-goods-list-item .btn-buy:active {
+  background-color: var(--basic-green-dark);
+}
+
+.pop-goods-list-item .btn-bookmarks {
+  border: 3px solid var(--basic-green-pale);
+  border-radius: 2px;
+  color: var(--basic-sapphire);
+  background-color: inherit;
+}
+
+.pop-goods-list-item .btn-bookmarks:hover {
+  border-color: var(--basic-sapphire);
+  background-color: inherit;
+}
+
+.pop-goods-list-item .btn-bookmarks:focus,
+.pop-goods-list-item .btn-bookmarks:active {
+  border-color: var(--basic-sapphire);
+  background-color: inherit;
+  opacity: 0.5;
+}
+
+/* Популярные производители. */
+
+.pop-manufacturers-list {
+  list-style: none;
+}
+
+.pop-manufacturers-list-item a:hover {
+  filter: drop-shadow(0px 4px 20px var(--basic-black-15));
+}
+
+.pop-manufacturers-list-item a:focus,
+.pop-manufacturers-list-item a:active {
+  filter: drop-shadow(0px 4px 20px var(--basic-black-15));
+  opacity: 0.5;
+}
+
+/* Сервисы. */
+
+.services {
+  background-color: var(--basic-sapphire-white);
+  background-image: url("../img/deliverytruck.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+/* Блок кнопок управления слайдером. */
+
+.services-buttons button {
+  border: none;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: 700;
+  color: var(--basic-white);
+  background-color: var(--basic-sapphire);
+}
+
+.services-buttons button:hover {
+  background-color: var(--basic-sapphire-dark);
+}
+
+.services-buttons button:focus,
+.services-buttons button:active,
+.services-buttons button.servises-button-active {
+  color: var(--basic-sapphire);
+  background-color: var(--basic-white);
+}
+
+/* Список слайдов. */
+
+.services-list {
+  list-style: none;
+}
+
+/* О нас. */
+
+.about-us .partners-list {
+  list-style: none;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 18px;
+}
+
+/* Подвал. */
+
+.main-footer {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-sapphire);
+}
+
+.main-footer-phone {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Два навигационных списка в подвале. */
+
+.footer-site-navigation,
+.goods-categories {
+  list-style: none;
+}
+
+.footer-site-navigation a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.goods-categories a,
+.email a,
+.author a {
+  color: var(--basic-yellow-pale);
+  text-decoration: none;
+}
+
+.footer-site-navigation a:hover,
+.goods-categories a:hover,
+.email a:hover,
+.author a:hover {
+  text-decoration: underline;
+}
+
+.footer-site-navigation a:focus,
+.footer-site-navigation a:active,
+.goods-categories a:focus,
+.goods-categories a:active {
+  text-decoration: underline;
+  opacity: 0.5;
+}
+
+/* Нижняя часть подвала. */
+
+.main-footer-bottom {
+  font-size: 16px;
+  line-height: 18px;
+  background-color: var(--basic-sapphire-dark);
+}
+
+/* Список ссылок на соц. сети. */
+
+.main-footer-bottom .social {
+  list-style: none;
+}
+
+/* Ссылки в двух последних абзацах подвала. */
+
+.email a:focus,
+.email a:active,
+.author a:focus,
+.author a:active {
+  color: var(--basic-red);
+  text-decoration: none;
+}
+
+/* Общие стили для всплывающих окон. */
+.modal {
+  background-color: var(--basic-white);
+}
+
+.modal h2 {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
+}
+
+.modal label {
+  font-size: 18px;
+}
+
+.modal input,
+.modal textarea {
+  border: 2px solid var(--basic-grey-light);
+  border-radius: 2px;
+  font: inherit;
+  font-size: 13px;
+}
+
+.modal input:focus,
+.modal textarea:focus {
+  border-color: var(--basic-grey-dark);
+}
+
+.write-to-us .modal-bottom {
+  background-color: var(--basic-grey-white);
+}
+
+.alert .modal-bottom {
+  background-color: var(--basic-grey-extra-light);
+}
+
+/* Кнопка "Продолжить покупки". */
+.modal .btn.btn-close {
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+.modal .btn.btn-close:hover {
+  color: var(--basic-red);
+}
+
+.modal .btn.btn-close:focus,
+.modal .btn.btn-close:active {
+  color: var(--basic-grey-light);
+}
+
+/* Ползунок */
+
 .double-price-slider {
   position: relative;
   width: 220px;
