@@ -51,7 +51,8 @@
   --basic-white-50: rgba(255, 255, 255, 0.5);
   --basic-white-30: rgba(255, 255, 255, 0.3);
   --basic-grey-white: #f4f4f4;
-  --basic-grey-extra-light: #f1f1f1;
+  --basic-grey-super-light: #f1f1f1;
+  --basic-grey-extra-light: #e5e5e5;
   --basic-grey-light: #c5c5c5;
   --basic-grey-light-30: rgba(197, 197, 197, 0.3);
   --basic-grey: #b5b5b5;
@@ -76,6 +77,7 @@
   --basic-yellow: #ffbf47;
   --basic-violet: #dc91d8;
   --basic-orange-white: #f9f5f0;
+  --basic-orange-extra-light: #f7f3ec;
   --basic-black: #000000;
   --basic-black-40: rgba(0, 0, 0, 0.4);
   --basic-black-30: rgba(0, 0, 0, 0.3);
@@ -92,6 +94,7 @@
   line-height: 24px;
 }
 
+.page-body h1,
 .page-body h2,
 .servises-list-item h3 {
   font-family: "Cuprum", "Arial", sans-serif;
@@ -99,6 +102,10 @@
   line-height: 30px;
   font-weight: 400;
   text-transform: uppercase;
+}
+
+.page-body h1 {
+  background-color: var(--basic-sapphire-white);
 }
 
 /* Красная кнопка и похожие на неё, в том числе стикер. */
@@ -164,10 +171,28 @@
   text-decoration: none;
 }
 
+.main-header-top .bookmarks,
+.main-header-top .cart {
+  background-color: var(--basic-red);
+}
+
 .main-header-top .bookmarks:focus,
 .main-header-top .bookmarks:active,
 .main-header-top .cart:focus,
 .main-header-top .cart:active {
+  color: var(--basic-white-50);
+  background-color: var(--basic-red-dark);
+}
+
+.main-header-top .bookmarks.empty,
+.main-header-top .cart.empty {
+  background-color: transparent;
+}
+
+.main-header-top .bookmarks.empty:focus,
+.main-header-top .bookmarks.empty:active,
+.main-header-top .cart.empty:focus,
+.main-header-top .cart.empty:active {
   color: var(--basic-white-50);
   background-color: var(--basic-sapphire-black);
 }
@@ -191,6 +216,7 @@
 .main-header-middle .description {
   font-size: 16px;
   line-height: 23px;
+  font-style: italic;
   color: var(--basic-red);
 }
 
@@ -292,6 +318,12 @@
 
 /* Слайдер в промо-блоке. */
 
+.pop-goods-slider-item {
+  background-color: var(--basic-black);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .pop-goods-slider-item h3 {
   font-size: 36px;
   line-height: 36px;
@@ -304,17 +336,11 @@
 }
 
 .pop-goods-slider-item.perforators {
-  background-color: var(--basic-black);
   background-image: url(../img/perforators-promo-background.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .pop-goods-slider-item.drills {
-  background-color: var(--basic-black);
   background-image: url(../img/drills-promo-background.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 /* Такая шапка с бледно=оранжевым фоном есть у двух секций. */
@@ -323,6 +349,7 @@
   background-color: var(--basic-orange-white);
 }
 
+.main-title,
 .section-header h2,
 .servises-list-item h3 {
   color: var(--basic-sapphire);
@@ -520,7 +547,7 @@
 
 /* Список ссылок на соц. сети. */
 
-.main-footer-bottom .social {
+.main-footer-bottom .socials {
   list-style: none;
 }
 
@@ -534,7 +561,160 @@
   text-decoration: none;
 }
 
+/* ------- catalog.html ------- */
+
+.user-navigation {
+  /* 2 ссылки под авторизацией: "Мои заказы", "Личный кабинет". */
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+} /* Может сделать это списком, а не дивом? */
+
+.user-navigation a {
+  color: var(--basic-sapphire);
+  text-decoration: none;
+}
+
+.user-navigation a:hover {
+  color: var(--basic-red);
+}
+
+.user-navigation a:focus,
+.user-navigation:active {
+  color: var(--basic-grey-light);
+}
+
+.breadcrumbs-list,
+.goods-filter,
+.goods-sorting,
+.catalog-btn,
+.paginator {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+/* В правиле выше ↑ я задал общие свойства шрифта
+   для нескольких блоков.
+   Ещё я хотел, чтобы кнопки наследовали эти
+   свойства, но почему-то это не срабатывало...
+
+.catalog-btn {
+  font: inherit;
+}
+
+*/
+
+.goods-filter h2,
+.goods-sorting h2 {
+  font: inherit;
+}
+
+.breadcrumbs-list,
+.goods-filter-form ul,
+.goods-sorting ul,
+.paginator ul {
+  list-style: none;
+}
+
+.breadcrumbs-list-item a,
+.paginator a {
+  color: var(--basic-black);
+  text-decoration: none;
+}
+
+.goods-filter h2,
+.goods-sorting,
+.goods-filter-price input {
+  background-color: var(--basic-orange-extra-light);
+}
+
+.goods-filter-form legend {
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.goods-filter-form label {
+  font-size: 15px;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
+.goods-filter-price input {
+  border: none;
+  font-size: 17px;
+  line-height: inherit;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Этот код убирает стрелочки в числовых полях. */
+.goods-filter-price input[type="number"] {
+  -moz-appearance: textfield;
+}
+.goods-filter-price input::-webkit-outer-spin-button,
+.goods-filter-price input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="radio"]:disabled + label,
+input[type="checkbox"]:disabled + label {
+  opacity: 0.4;
+}
+
+.catalog-btn[type="submit"],
+.paginator a {
+  border: 1px solid var(--basic-grey-extra-light);
+  text-align: center;
+  background-color: var(--basic-white);
+}
+
+.catalog-btn[type="submit"]:hover,
+.paginator a:hover {
+  border-color: var(--basic-grey-light);
+}
+
+.catalog-btn[type="submit"]:focus,
+.catalog-btn[type="submit"]:active,
+.paginator a:focus,
+.paginator a:active {
+  border-color: var(--basic-red);
+}
+
+.paginator a.current {
+  border-color: var(--basic-red);
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+
+/* dotted – линия из кружочков. В макете линия из квадратиков. Нужно исправлять? */
+.goods-sorting .catalog-btn {
+  border: none;
+  border-bottom: 1px dotted var(--basic-red);
+  background-color: transparent;
+  opacity: 0.3;
+}
+
+.goods-sorting .catalog-btn:hover {
+  border-bottom-style: solid;
+  opacity: 1;
+}
+
+.goods-sorting .catalog-btn:focus,
+.goods-sorting .catalog-btn:active,
+.goods-sorting .catalog-btn.catalog-btn-active {
+  border-bottom: none;
+  color: var(--basic-red);
+  opacity: 1;
+}
+
+.about-perforators {
+  background-color: var(--basic-sapphire-white);
+}
+
 /* Общие стили для всплывающих окон. */
+
 .modal {
   background-color: var(--basic-white);
 }
@@ -568,7 +748,7 @@
 }
 
 .alert .modal-bottom {
-  background-color: var(--basic-grey-extra-light);
+  background-color: var(--basic-grey-super-light);
 }
 
 /* Кнопка "Продолжить покупки". */
