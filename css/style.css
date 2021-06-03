@@ -588,23 +588,16 @@
 .breadcrumbs-list,
 .goods-filter,
 .goods-sorting,
-.catalog-btn,
 .paginator {
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
 }
 
-/* В правиле выше ↑ я задал общие свойства шрифта
-   для нескольких блоков.
-   Ещё я хотел, чтобы кнопки наследовали эти
-   свойства, но почему-то это не срабатывало...
-
 .catalog-btn {
   font: inherit;
+  text-transform: uppercase;
 }
-
-*/
 
 .goods-filter h2,
 .goods-sorting h2 {
@@ -651,13 +644,16 @@
 }
 
 /* Этот код убирает стрелочки в числовых полях. */
+
 .goods-filter-price input[type="number"] {
   -moz-appearance: textfield;
 }
+
 .goods-filter-price input::-webkit-outer-spin-button,
 .goods-filter-price input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
+
 input[type="radio"]:disabled + label,
 input[type="checkbox"]:disabled + label {
   opacity: 0.4;
@@ -688,7 +684,6 @@ input[type="checkbox"]:disabled + label {
   background-color: var(--basic-red);
 }
 
-/* dotted – линия из кружочков. В макете линия из квадратиков. Нужно исправлять? */
 .goods-sorting .catalog-btn {
   border: none;
   border-bottom: 1px dotted var(--basic-red);
@@ -704,7 +699,7 @@ input[type="checkbox"]:disabled + label {
 .goods-sorting .catalog-btn:focus,
 .goods-sorting .catalog-btn:active,
 .goods-sorting .catalog-btn.catalog-btn-active {
-  border-bottom: none;
+  border-bottom-color: transparent;
   color: var(--basic-red);
   opacity: 1;
 }
@@ -752,6 +747,7 @@ input[type="checkbox"]:disabled + label {
 }
 
 /* Кнопка "Продолжить покупки". */
+
 .modal .btn.btn-close {
   color: var(--basic-black);
   background-color: var(--basic-white);
