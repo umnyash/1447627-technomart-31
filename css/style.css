@@ -111,23 +111,27 @@
 /* Красная кнопка и похожие на неё, в том числе стикер. */
 .page-body .btn,
 .page-body .sticker-new {
-  border: none;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
   text-align: center;
-  color: var(--basic-white);
   text-decoration: none;
+}
+
+.page-body .btn-default,
+.page-body .sticker-new {
+  border: none;
+  color: var(--basic-white);
   background-color: var(--basic-red);
 }
 
-.page-body .btn:hover {
+.page-body .btn-default:hover {
   background-color: var(--basic-red-dark);
 }
 
-.page-body .btn:focus,
-.page-body .btn:active {
+.page-body .btn-default:focus,
+.page-body .btn-default:active {
   background-color: var(--basic-red-extra-dark);
 }
 
@@ -283,6 +287,7 @@
 }
 
 .pop-sections-item > .btn {
+  color: var(--basic-white);
   background-color: var(--basic-white-30);
 }
 
@@ -395,6 +400,7 @@
 
 .pop-goods-list-item .btn-buy {
   border-radius: 2px;
+  color: var(--basic-white);
   background-color: var(--basic-green-pale);
   box-shadow: inset 0px -3px 0px var(--basic-green-extra-dark);
 }
@@ -417,13 +423,11 @@
 
 .pop-goods-list-item .btn-bookmarks:hover {
   border-color: var(--basic-sapphire);
-  background-color: inherit;
 }
 
 .pop-goods-list-item .btn-bookmarks:focus,
 .pop-goods-list-item .btn-bookmarks:active {
   border-color: var(--basic-sapphire);
-  background-color: inherit;
   opacity: 0.5;
 }
 
@@ -753,7 +757,7 @@ input[type="checkbox"]:disabled + label {
 /* Кнопка "Продолжить покупки". */
 
 .modal .btn.btn-close {
-  color: var(--basic-black);
+  border: none;
   background-color: var(--basic-white);
 }
 
