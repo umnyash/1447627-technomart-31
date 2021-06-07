@@ -259,12 +259,12 @@
   background-color: var(--basic-sapphire);
 }
 
-.site-navigation a:hover {
+.site-navigation a[href]:hover {
   background-color: var(--basic-sapphire-dark);
 }
 
-.site-navigation a:focus,
-.site-navigation a:active {
+.site-navigation a[href]:focus,
+.site-navigation a[href]:active {
   color: var(--basic-white-50);
   background-color: var(--basic-sapphire-extra-dark);
 }
@@ -526,17 +526,17 @@
   text-decoration: none;
 }
 
-.footer-site-navigation a:hover,
-.goods-categories a:hover,
-.email a:hover,
-.author a:hover {
+.footer-site-navigation a[href]:hover,
+.goods-categories a[href]:hover,
+.email a[href]:hover,
+.author a[href]:hover {
   text-decoration: underline;
 }
 
-.footer-site-navigation a:focus,
-.footer-site-navigation a:active,
-.goods-categories a:focus,
-.goods-categories a:active {
+.footer-site-navigation a[href]:focus,
+.footer-site-navigation a[href]:active,
+.goods-categories a[href]:focus,
+.goods-categories a[href]:active {
   text-decoration: underline;
   opacity: 0.5;
 }
