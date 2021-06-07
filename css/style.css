@@ -571,6 +571,10 @@
   text-align: center;
 } /* Может сделать это списком, а не дивом? */
 
+.user-navigation ul {
+  list-style: none;
+}
+
 .user-navigation a {
   color: var(--basic-sapphire);
   text-decoration: none;
