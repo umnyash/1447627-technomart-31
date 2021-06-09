@@ -107,7 +107,7 @@
   line-height: 24px;
 }
 
-.page-body h1,
+.page-body .main-title,
 .page-body h2,
 .services-list-item h3 {
   font-family: "Cuprum", "Arial", sans-serif;
@@ -117,7 +117,10 @@
   text-transform: uppercase;
 }
 
-.page-body h1 {
+.page-body .main-title {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 30px;
   background-color: var(--basic-sapphire-white);
 }
 
@@ -158,6 +161,10 @@
   line-height: 24px;
   color: var(--basic-sapphire);
   background-color: var(--basic-sapphire-white);
+}
+
+.inner-page .main-header {
+  margin-bottom: 21px;
 }
 
 /* Верхняя часть шапки. */
@@ -272,7 +279,8 @@
   text-decoration: none;
 }
 
-.authorization {
+.authorization,
+.user {
   justify-self: end;
 }
 
@@ -427,67 +435,70 @@
   padding: 0;
 }
 
-.pop-goods-list-item .link-title {
+.catalog-item {
+  text-align: center;
+}
+
+.catalog-item .link-title {
   font-size: 18px;
   line-height: 20px;
   font-weight: 700;
-  text-align: center;
   color: black;
   text-decoration: none;
 }
 
-.pop-goods-list-item .prices {
+.catalog-item .prices {
   font-size: 17px;
   line-height: 18px;
   font-weight: 700;
   text-align: center;
 }
 
-.pop-goods-list-item .old-price {
+.catalog-item .old-price {
   color: var(--basic-grey-dark);
   text-decoration: line-through;
 }
 
-.pop-goods-list-item .new-price {
+.catalog-item .new-price {
   color: var(--basic-white);
   background-color: var(--basic-red);
 }
 
 /* Блок с кнопками который должен появляться при наведении. */
 
-.pop-goods-list-item .actions-with-goods {
+.catalog-item .actions-with-goods {
   background-color: var(--basic-white);
 }
 
-.pop-goods-list-item .btn-buy {
+.catalog-item .btn-buy {
   border-radius: 2px;
   color: var(--basic-white);
   background-color: var(--basic-green-pale);
   box-shadow: inset 0px -3px 0px var(--basic-green-extra-dark);
 }
 
-.pop-goods-list-item .btn-buy:hover {
+.catalog-item .btn-buy:hover {
   background-color: var(--basic-green);
 }
 
-.pop-goods-list-item .btn-buy:focus,
-.pop-goods-list-item .btn-buy:active {
+.catalog-item .btn-buy:focus,
+.catalog-item .btn-buy:active {
   background-color: var(--basic-green-dark);
 }
 
-.pop-goods-list-item .btn-bookmarks {
+.catalog-item .btn-bookmarks {
   border: 3px solid var(--basic-green-pale);
   border-radius: 2px;
   color: var(--basic-sapphire);
   background-color: inherit;
 }
 
-.pop-goods-list-item .btn-bookmarks:hover {
+.catalog-item .btn-bookmarks:hover {
   border-color: var(--basic-sapphire);
 }
 
-.pop-goods-list-item .btn-bookmarks:focus,
-.pop-goods-list-item .btn-bookmarks:active {
+.catalog-item .btn-bookmarks:focus,
+.catalog-item .btn-bookmarks:active {
   border-color: var(--basic-sapphire);
   opacity: 0.5;
 }
@@ -710,6 +721,8 @@
 
 .user-navigation ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .user-navigation a {
@@ -726,6 +739,17 @@
   color: var(--basic-grey-light);
 }
 
+.main-content {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: repeat(4, min-content);
+  gap: 20px;
+}
+
+.breadcrumbs-list {
+  grid-column: 1 / -1;
+}
+
 .breadcrumbs-list,
 .goods-filter,
 .goods-sorting,
@@ -740,6 +764,10 @@
   text-transform: uppercase;
 }
 
+.goods-filter {
+  grid-row: 3 / -1;
+}
+
 .goods-filter h2,
 .goods-sorting h2 {
   font: inherit;
@@ -748,8 +776,10 @@
 .breadcrumbs-list,
 .goods-filter-form ul,
 .goods-sorting ul,
+.catalog-list,
 .paginator ul {
   list-style: none;
+  padding: 0;
 }
 
 .breadcrumbs-list-item a,
@@ -819,10 +849,47 @@ input[type="checkbox"]:disabled + label {
   border-color: var(--basic-red);
 }
 
+.catalog {
+  margin-bottom: 48px;
+}
+
+.catalog-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 18px;
+  margin-bottom: 48px;
+}
+
+.paginator {
+  margin: 0;
+  padding: 0;
+}
+
 .paginator a.current {
   border-color: var(--basic-red);
   color: var(--basic-white);
   background-color: var(--basic-red);
+}
+
+.goods-sorting {
+  grid-row: 3 / 4;
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+  gap: 46px;
+  padding-top: 10px;
+  padding-right: 17px;
+  padding-bottom: 10px;
+  padding-left: 19px;
+}
+
+.goods-sorting-criterions-list {
+  justify-self: end;
+  margin: 0;
+}
+
+.goods-sorting-directions-list {
+  margin: 0;
 }
 
 .goods-sorting .catalog-btn {
