@@ -35,9 +35,11 @@
             <a class="main-header-phone" href="tel:+78005558628">+7 800 555-86-28</a>
             г. Санкт-Петербург, наб. Реки Карповки, 5 лит П
           </p>
-          <div class="authorization">
-            <a class="sign-in" href="#">Войти</a>
-            <a class="sign-up" href="#">Регистрация</a>
+          <div class="user">
+            <div class="authorization">
+              <a class="sign-in" href="#">Войти</a>
+              <a class="sign-up" href="#">Регистрация</a>
+            </div>
           </div>
         </div>
         <nav class="main-navigation">
@@ -82,13 +84,17 @@
           <li class="pop-sections-item pop-goods-slider">
             <ul>
               <li class="pop-goods-slider-item perforators">
-                <h3>Перфораторы</h3>
-                <p>Настоящие мужские игрушки</p>
+                <header>
+                  <h3>Перфораторы</h3>
+                  <p>Настоящие мужские игрушки</p>
+                </header>
                 <a class="btn btn-default" href="catalog.html">Открыть каталог</a>
               </li>
-              <li class="pop-goods-slider-item drills" hidden>
-                <h3>Дрели</h3>
-                <p>Соседям на радость!</p>
+              <li class="pop-goods-slider-item drills hidden">
+                <header>
+                  <h3>Дрели</h3>
+                  <p>Соседям на радость!</p>
+                </header>
                 <a class="btn btn-default" href="catalog.html">Открыть каталог</a>
               </li>
             </ul>
@@ -104,7 +110,7 @@
         </header>
         <ul class="pop-goods-list">
           <li class="pop-goods-item catalog-item">
-            <h3><a class="link-title" href="#">Перфоратор BOSCH BFG 9000</a></h3>
+            <h3><a class="link-title" href="#">Перфоратор BOSCH BFG&nbsp;9000</a></h3>
             <img src="files/catalog/perforator-bosch-bfg9000.jpg" width="218" height="169" alt="Перфоратор сетевой с угловой компоновкой.">
             <p class="prices">
               <s class="old-price">32500 Р.</s>
@@ -116,7 +122,7 @@
             </div>
           </li>
           <li class="pop-goods-item catalog-item">
-            <h3><a class="link-title" href="#">Перфоратор BOSCH BFG 3000</a></h3>
+            <h3><a class="link-title" href="#">Перфоратор BOSCH BFG&nbsp;3000</a></h3>
             <p class="sticker-new">New</p>
             <img src="files/catalog/perforator-bosch-bfg3000.jpg" width="218" height="169" alt="Перфоратор аккумуляторный с угловой компоновкой.">
             <p class="prices">
@@ -129,7 +135,7 @@
             </div>
           </li>
           <li class="pop-goods-item catalog-item">
-            <h3><a class="link-title" href="#">Перфоратор BOSCH BFG 6000</a></h3>
+            <h3><a class="link-title" href="#">Перфоратор BOSCH BFG&nbsp;6000</a></h3>
             <img src="files/catalog/perforator-bosch-bfg6000.jpg" width="218" height="169" alt="Перфоратор аккумуляторный с угловой компоновкой и ограничительной линейкой.">
             <p class="prices">
               <s class="old-price">30500 Р.</s>
@@ -141,7 +147,7 @@
             </div>
           </li>
           <li class="pop-goods-item catalog-item">
-            <h3><a class="link-title" href="#">Перфоратор BOSCH BFG 2000</a></h3>
+            <h3><a class="link-title" href="#">Перфоратор BOSCH BFG&nbsp;2000</a></h3>
             <p class="sticker-new">New</p>
             <img src="files/catalog/perforator-bosch-bfg2000.jpg" width="218" height="169" alt="Перфоратор аккумуляторный с угловой компоновкой.">
             <p class="prices">
@@ -215,7 +221,7 @@
           <ul class="services-list">
             <li class="services-list-item">
               <h3>Доставка</h3>
-              <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
+              <p>Мы с удовольствием доставим ваш товар прямо к&nbsp;вашему подъезду совершенно бесплатно! <br>Ведь мы неплохо заработаем, <br>поднимая его на&nbsp;ваш этаж!</p>
             </li>
             <li class="services-list-item" hidden>
               <h3>Гарантия</h3>
@@ -244,7 +250,7 @@
         </section>
         <section class="contacts">
           <h2>Контакты</h2>
-          <p>Вы можете забрать товар сами, заехав в наш офис:</p>
+          <p>Вы можете забрать товар сами, <br>заехав в наш офис:</p>
           <img src="img/address.png" width="300" height="158"
             alt="Расположение офиса на карте по адресу: г. Санкт-Петербург, наб. Реки Карповки, 5 лит П.">
           <a class="btn btn-default" href="#">Заблудились? Напишите нам!</a>
@@ -278,11 +284,11 @@
       </div>
       <div class="main-footer-bottom">
         <div class="container">
-          <p>© 2010–2021 Компания «Техномарт»<br>
+          <p class="copyright">© 2010–2021 Компания «Техномарт»<br>
             Все права защищены</p>
-          <section>
+          <section class="socials">
             <h2>Техномарт в соцсетях</h2>
-            <ul class="socials">
+            <ul class="socials-list">
               <li><a href="#">Вконтакте</a></li>
               <li><a href="#">Фейсбук</a></li>
               <li><a href="#">Инстаграм</a></li>
@@ -302,21 +308,23 @@
     <section class="modal write-to-us">
       <h2>Напишите нам!</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
-        <p class="name">
-          <label>Ваше имя:
-            <input type="text" name="user-name" placeholder="Имя Фамилия">
-          </label>
-        </p>
-        <p class="email">
-          <label>Ваш e-mail:
-            <input type="email" name="user-email" placeholder="email@example.com" required>
-          </label>
-        </p>
-        <p class="letter">
-          <label>Текст письма:
-            <textarea name="user-message" placeholder="В свободной форме" required></textarea>
-          </label>
-        </p>
+        <div class="modal-main">
+          <p class="name">
+            <label>Ваше имя:
+              <input type="text" name="user-name" placeholder="Имя Фамилия">
+            </label>
+          </p>
+          <p class="email">
+            <label>Ваш e-mail:
+              <input type="email" name="user-email" placeholder="email@example.com" required>
+            </label>
+          </p>
+          <p class="letter">
+            <label>Текст письма:
+              <textarea name="user-message" placeholder="В свободной форме" required></textarea>
+            </label>
+          </p>
+        </div>
         <div class="modal-bottom">
           <button class="btn btn-default" type="submit">Отправить</button>
         </div>
