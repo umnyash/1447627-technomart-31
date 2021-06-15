@@ -128,6 +128,9 @@
 /* Красная кнопка и похожие на неё, в том числе стикер. */
 .page-body .btn,
 .page-body .sticker-new {
+  box-sizing: border-box;
+  min-height: 38px;
+  padding: 10px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -148,11 +151,7 @@
 }
 
 .page-body .btn-default {
-  display: flex;
   width: 192px;
-  height: 38px;
-  justify-content: center;
-  align-items: center;
 }
 
 .page-body .btn-default:hover {
@@ -334,6 +333,15 @@
   text-decoration: none;
 }
 
+.main-header-middle .main-header-phone:hover {
+  color: var(--basic-black);
+}
+
+.main-header-middle .main-header-phone:focus,
+.main-header-middle .main-header-phone:active {
+  color: var(--basic-grey-light);
+}
+
 .authorization {
   display: flex;
 }
@@ -377,6 +385,7 @@
 .site-navigation {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -437,7 +446,6 @@
 .pop-sections-item > .btn {
   display: flex;
   width: 135px;
-  height: 38px;
   justify-content: center;
   align-items: center;
   color: var(--basic-white);
@@ -527,8 +535,9 @@
 }
 
 .pop-goods-slider-item .btn {
-  margin-left: 24px;
+  margin-right: 24px;
   margin-bottom: 27px;
+  margin-left: 24px;
 }
 
 .pop-goods-slider-item.perforators {
@@ -557,6 +566,7 @@
 .section-header h2,
 .services-list-item h3 {
   margin: 0;
+  margin-right: 28px;
   color: var(--basic-sapphire);
 }
 
@@ -585,28 +595,37 @@
 }
 
 .catalog-item h3 {
-  margin: 0;
-  margin-bottom: auto;
+  margin-top: 0;
+  margin-right: 17px;
+  margin-bottom: 7px;
+  margin-left: 17px;
   text-align: center;
 }
 
-.catalog-item img {
-  max-width: 218px;
-  height: auto;
+.catalog-item .picture-and-actions {
+  width: 100%;
+  height: 169px;
   margin-bottom: 8px;
   order: -1;
+  position: relative;
+}
+
+.picture-and-actions img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .catalog-item .link-title {
   font-size: 18px;
   line-height: 20px;
   font-weight: 700;
-  color: black;
+  color: var(--basic-black);
   text-decoration: none;
 }
 
 .catalog-item .prices {
   margin: 0;
+  margin-top: auto;
   font-size: 17px;
   line-height: 18px;
   font-weight: 700;
@@ -634,21 +653,22 @@
 /* Блок с кнопками который должен появляться при наведении. */
 
 .catalog-item .actions-with-goods {
-  width: calc(100%-2px);
-  height: 175px;
-  padding-top: 38px;
-  padding-right: 44px;
-  padding-left: 41px;
+  display: none;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
   background-color: var(--basic-white);
 }
 
 .actions-with-goods .btn {
-  display: flex;
+  display: block;
   box-sizing: border-box;
   width: 135px;
-  height: 38px;
-  justify-content: center;
-  align-items: center;
+  margin: 10px auto;
 }
 
 .catalog-item .btn-buy {
@@ -669,7 +689,8 @@
 }
 
 .catalog-item .btn-bookmarks {
-  border: 3px solid var(--basic-green-pale);
+  outline: 3px solid var(--basic-green-pale);
+  outline-offset: -3px;
   border-radius: 2px;
   color: var(--basic-sapphire);
   background-color: inherit;
@@ -683,6 +704,10 @@
 .catalog-item .btn-bookmarks:active {
   border-color: var(--basic-sapphire);
   opacity: 0.5;
+}
+
+.catalog-item:hover .actions-with-goods {
+  display: block;
 }
 
 /* Популярные производители. */
@@ -895,8 +920,9 @@
 
 .main-footer-contacts {
   grid-row: 2 / 3;
-  width: 350px;
+  min-width: 350px;
   margin: 0;
+  margin-right: 20px;
 }
 
 .main-footer-phone {
@@ -911,23 +937,24 @@
 .goods-categories {
   justify-self: end;
   list-style: none;
+  display: flex;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
 }
 
 .footer-site-navigation {
-  display: flex;
-  width: 546px;
   margin-top: 37px;
   margin-bottom: 29px;
-  justify-content: space-between;
 }
 
 .goods-categories {
-  display: flex;
-  width: 524px;
   margin-top: 5px;
-  justify-content: space-between;
+}
+
+.footer-site-navigation li:not(:last-child),
+.goods-categories li:not(:last-child) {
+  margin-right: 58px;
 }
 
 .footer-site-navigation a {
@@ -946,14 +973,17 @@
 .footer-site-navigation a[href]:hover,
 .goods-categories a[href]:hover,
 .email a[href]:hover,
-.author a[href]:hover {
+.author a[href]:hover,
+.main-footer-phone:hover {
   text-decoration: underline;
 }
 
 .footer-site-navigation a[href]:focus,
 .footer-site-navigation a[href]:active,
 .goods-categories a[href]:focus,
-.goods-categories a[href]:active {
+.goods-categories a[href]:active,
+.main-footer-phone:focus,
+.main-footer-phone:active {
   text-decoration: underline;
   opacity: 0.5;
 }
@@ -989,6 +1019,21 @@
   display: flex;
   padding: 0;
   margin: 0;
+  list-style: none;
+}
+
+.socials-list a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.socials-list a:hover {
+  color: var(--basic-red);
+}
+
+.socials-list a:focus,
+.socials-list a:active {
+  color: var(--basic-red);
 }
 
 .main-footer-bottom .email {
@@ -998,12 +1043,6 @@
 
 .main-footer-bottom .author {
   width: 111px;
-}
-
-/* Список ссылок на соц. сети. */
-
-.main-footer-bottom .socials-list {
-  list-style: none;
 }
 
 /* Ссылки в двух последних абзацах подвала. */
