@@ -623,6 +623,16 @@
   text-decoration: none;
 }
 
+.catalog-item .link-title:hover {
+  color: var(--basic-red);
+}
+
+.catalog-item .link-title:focus,
+.catalog-item .link-title:active {
+  color: var(--basic-red);
+  opacity: 0.3;
+}
+
 .catalog-item .prices {
   margin: 0;
   margin-top: auto;
@@ -940,6 +950,7 @@
   display: flex;
   margin: 0;
   padding: 0;
+  justify-content: flex-end;
   flex-wrap: wrap;
 }
 
@@ -952,9 +963,9 @@
   margin-top: 5px;
 }
 
-.footer-site-navigation li:not(:last-child),
-.goods-categories li:not(:last-child) {
-  margin-right: 58px;
+.footer-site-navigation li:not(:first-child),
+.goods-categories li:not(:first-child) {
+  margin-left: 58px;
 }
 
 .footer-site-navigation a {
