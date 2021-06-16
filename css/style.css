@@ -344,6 +344,7 @@
 
 .authorization {
   display: flex;
+  margin-bottom: 7px;
 }
 
 .authorization a {
@@ -624,13 +625,13 @@
 }
 
 .catalog-item .link-title:hover {
-  color: var(--basic-red);
+  color: var(--basic-sapphire);
 }
 
 .catalog-item .link-title:focus,
 .catalog-item .link-title:active {
-  color: var(--basic-red);
-  opacity: 0.3;
+  color: var(--basic-sapphire);
+  opacity: 0.5;
 }
 
 .catalog-item .prices {
@@ -1069,17 +1070,20 @@
 /* ------- catalog.html ------- */
 
 .user-navigation {
-  /* 2 ссылки под авторизацией: "Мои заказы", "Личный кабинет". */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
   text-align: center;
-} /* Может сделать это списком, а не дивом? */
+}
 
-.user-navigation ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.user-navigation li:not(:last-child) {
+  margin-right: 15px;
 }
 
 .user-navigation a {
@@ -1105,6 +1109,10 @@
 
 .breadcrumbs-list {
   grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 .breadcrumbs-list,
@@ -1139,6 +1147,10 @@
   padding: 0;
 }
 
+.breadcrumbs-list-item:not(:last-child) {
+  margin-right: 15px;
+}
+
 .breadcrumbs-list-item a,
 .paginator a {
   color: var(--basic-black);
@@ -1149,6 +1161,29 @@
 .goods-sorting,
 .goods-filter-price input {
   background-color: var(--basic-orange-extra-light);
+}
+
+.goods-filter h2 {
+  padding-top: 10px;
+  padding-right: 18px;
+  padding-bottom: 10px;
+  padding-left: 18px;
+  margin: 0;
+  margin-bottom: 14px;
+}
+
+.goods-filter-form fieldset {
+  padding: 0;
+  padding-bottom: 25px;
+  border: none;
+  border-bottom: 1px solid var(--card-border-color);
+  margin: 0;
+  margin-bottom: 17px;
+}
+
+.goods-filter-form fieldset:last-of-type {
+  border-bottom: none;
+  margin-bottom: 9px;
 }
 
 .goods-filter-form legend {
@@ -1163,7 +1198,19 @@
   text-transform: uppercase;
 }
 
+.goods-filter-price legend {
+  margin-bottom: 11px;
+}
+
+.goods-filter-price .double-price-slider {
+  margin-bottom: 9px;
+}
+
 .goods-filter-price input {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 95px;
+  padding: 10px;
   border: none;
   font-size: 17px;
   line-height: inherit;
@@ -1194,6 +1241,12 @@ input[type="checkbox"]:disabled + label {
   background-color: var(--basic-white);
 }
 
+.catalog-btn[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+}
+
 .catalog-btn[type="submit"]:hover,
 .paginator a:hover {
   border-color: var(--basic-grey-light);
@@ -1207,7 +1260,7 @@ input[type="checkbox"]:disabled + label {
 }
 
 .catalog {
-  margin-bottom: 48px;
+  margin-bottom: 59px;
 }
 
 .catalog-list {
@@ -1215,12 +1268,24 @@ input[type="checkbox"]:disabled + label {
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 20px;
   row-gap: 18px;
+  margin: 0;
   margin-bottom: 48px;
 }
 
-.paginator {
-  margin: 0;
+.paginator ul {
+  display: flex;
   padding: 0;
+  margin: 0;
+}
+
+.paginator a {
+  display: block;
+  padding-top: 10px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  border-radius: 2px;
+  margin-right: 10px;
 }
 
 .paginator a.current {
@@ -1231,22 +1296,38 @@ input[type="checkbox"]:disabled + label {
 
 .goods-sorting {
   grid-row: 3 / 4;
-  display: grid;
-  grid-template-columns: min-content 1fr min-content;
-  gap: 46px;
+  display: flex;
   padding-top: 10px;
   padding-right: 17px;
   padding-bottom: 10px;
   padding-left: 19px;
+  margin-bottom: 8px;
+  align-items: center;
+}
+
+.goods-sorting h2 {
+  margin-right: auto;
 }
 
 .goods-sorting-criterions-list {
-  justify-self: end;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
   margin: 0;
+  margin-right: 46px;
+  margin-left: 46px;
+}
+
+.goods-sorting-criterions-list li:not(:first-child) {
+  margin-left: 65px;
 }
 
 .goods-sorting-directions-list {
   margin: 0;
+}
+
+.goods-sorting-directions-list li:first-child {
+  margin-right: 21px;
 }
 
 .goods-sorting .catalog-btn {
@@ -1271,6 +1352,13 @@ input[type="checkbox"]:disabled + label {
 
 .about-perforators {
   background-color: var(--basic-sapphire-white);
+  padding-top: 64px;
+  padding-bottom: 68px;
+}
+
+.about-perforators h2 {
+  margin: 0;
+  margin-bottom: 25px;
 }
 
 /* Общие стили для всплывающих окон. */
@@ -1317,6 +1405,10 @@ input[type="checkbox"]:disabled + label {
   outline: none;
 }
 
+.modal .modal-bottom {
+  text-align: center;
+}
+
 .write-to-us .modal-main {
   padding-top: 39px;
   padding-right: 80px;
@@ -1360,6 +1452,10 @@ input[type="checkbox"]:disabled + label {
 
 .alert .modal-bottom {
   background-color: var(--basic-grey-super-light);
+}
+
+.alert .btn-make-an-order {
+  margin-right: 10px;
 }
 
 .write-to-us button[type="submit"] {
