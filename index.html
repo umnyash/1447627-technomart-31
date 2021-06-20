@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Техномарт</title>
     <link rel="icon" href="favicon.ico">
-    <link rel="icon" type="image/svg+xml" href="favicons/icon.svg">
+    <link rel="icon" type="image/svg+xml" href="img/favicons/icon.svg">
     <link rel="apple-touch-icon" href="img/favicons/180.png">
-    <link rel="manifest" href="webmanifest">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page-body">
     <header class="main-header">
@@ -18,8 +18,15 @@
             <img src="img/logo.svg" width="108" height="18" alt="ТЕХНОМАРТ.">
           </a>
           <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-            <label for="search-field">Поиск:</label>
-            <input type="search" name="search-word" id="search-field" placeholder="Поиск:">
+            <label for="search-field" class="visually-hidden">Поиск:</label>
+            <div class="search-field-box">
+              <input class="search-field" type="search" name="search-word" id="search-field" placeholder="Поиск:">
+              <svg class="search-icon" width="17" height="17" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"
+                  fill="white"/>
+              </svg>
+            </div>
           </form>
           <div class="purchase-links">
             <a class="bookmarks empty" href="#">Закладки: <span>0</span></a>
@@ -32,12 +39,27 @@
         <div class="main-header-middle">
           <p class="description">Интернет-магазин строительных&nbsp;материалов и&nbsp;инструментов для ремонта</p>
           <p class="main-header-contacts">
-            <a class="main-header-phone" href="tel:+78005558628">+7 800 555-86-28</a>
+            <a class="main-header-phone" href="tel:+78005558628">
+              <svg class="phone-icon" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M15.572 18.985H14.631C10.502 18.497 7.474 16.577 5.272 14.121C3.062 11.66 1.318 8.492 0.977997 4.228V3.084C1.056 2.31 1.437 1.78 1.876 1.327C2.425 0.765997 3.25 0.0439969 4.002 0.0189969C4.556 0.000996886 5.502 0.398997 5.881 0.917997C6.21 1.364 6.385 2.257 6.537 2.921C6.691 3.592 7.042 4.564 6.945 5.21C6.797 6.217 5.458 6.644 5.066 7.376C6.373 10.511 8.509 12.815 11.359 14.407C12.074 14.015 12.705 12.835 13.691 12.812C14.05 12.803 14.509 12.99 14.875 13.098C15.277 13.219 15.625 13.373 15.979 13.506C16.575 13.73 17.627 14.027 17.983 14.527C18.348 15.04 18.553 15.883 18.473 16.406C18.309 17.447 16.594 18.603 15.572 18.985Z"
+                  fill="#B7BFC8" />
+              </svg>
+              +7 800 555-86-28
+            </a>
             г. Санкт-Петербург, наб. Реки Карповки, 5 лит П
           </p>
           <div class="user">
             <div class="authorization">
-              <a class="sign-in" href="#">Войти</a>
+              <a class="sign-in" href="#">
+                <svg class="login-icon" width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.1667 8.5L5.71429 0V6H0V11H5.71429V17L14.1667 8.5Z" fill="#C5C5C5" />
+                  <path
+                    d="M16.1771 15.01H11.3895V17H16.1771C18.2514 17 19.0381 15.19 19.0619 13.974V3.028C19.0381 1.811 18.2514 0 16.1771 0H11.3895V1.99H16.1771C16.9762 1.99 17.1219 2.671 17.1391 3.047V13.951C17.1229 14.327 16.9762 15.01 16.1771 15.01Z"
+                    fill="#C5C5C5" />
+                </svg>
+                Войти
+              </a>
               <a class="sign-up" href="#">Регистрация</a>
             </div>
           </div>
@@ -56,9 +78,9 @@
       </div>
     </header>
     <main>
-      <h1 class="main-title">Интернет-магазин «Техномарт»</h1>
+      <h1 class="main-title visually-hidden">Интернет-магазин «Техномарт»</h1>
       <section class="promo container">
-        <h2>Популярные разделы сайта</h2>
+        <h2 class="visually-hidden">Популярные разделы сайта</h2>
         <ul class="pop-sections-list">
           <li class="pop-sections-item materials">
             <h3>Материалы</h3>
@@ -98,8 +120,26 @@
                 <a class="btn btn-default" href="catalog.html">Открыть каталог</a>
               </li>
             </ul>
-            <button type="button">Предыдущий</button>
-            <button type="button">Следующий</button>
+            <div class="slider-controls">
+              <div class="slider-controls-box">
+                <button class="slide-1-button active" type="button" aria-label="Первый слайд"></button>
+                <button class="slide-2-button" type="button" aria-label="Второй слайд"></button>
+              </div>
+            </div>
+            <button class="slider-button prev-slide" type="button" aria-label="Предыдущий">
+              <svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19.9244 0.941467L21.9225 2.98927L4.90696 20.4361L21.978 37.9376L19.9789 39.9854L0.910614 20.4361L19.9244 0.941467Z"
+                  fill="white" />
+              </svg>
+            </button>
+            <button class="slider-button next-slide" type="button" aria-label="Следующий">
+              <svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.07568 39.0585L0.0775054 37.0107L17.0931 19.5639L0.0220266 2.06243L2.02116 0.0146289L21.0894 19.5639L2.07568 39.0585Z"
+                  fill="white" />
+              </svg>
+            </button>
           </li>
         </ul>
       </section>
@@ -221,21 +261,23 @@
         <div class="container">
           <h2>Сервисы</h2>
           <p class="services-text">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-          <div class="services-buttons">
-            <button class="btn-delivery services-button-active" type="button">Доставка</button>
-            <button class="btn-guarantee" type="button">Гарантия</button>
-            <button class="btn-credit" type="button">Кредит</button>
+          <div class="services-buttons-box">
+            <div class="services-buttons">
+              <button class="services-button btn-delivery services-button-active" type="button">Доставка</button>
+              <button class="services-button btn-guarantee" type="button">Гарантия</button>
+              <button class="services-button btn-credit" type="button">Кредит</button>
+            </div>
           </div>
           <ul class="services-list">
             <li class="services-list-item">
               <h3>Доставка</h3>
               <p>Мы с удовольствием доставим ваш товар прямо к&nbsp;вашему подъезду совершенно бесплатно! <br>Ведь мы неплохо заработаем, <br>поднимая его на&nbsp;ваш этаж!</p>
             </li>
-            <li class="services-list-item" hidden>
+            <li class="services-list-item hidden">
               <h3>Гарантия</h3>
               <p>(текст про гарантию)</p>
             </li>
-            <li class="services-list-item" hidden>
+            <li class="services-list-item hidden">
               <h3>Кредит</h3>
               <p>(текст про кредит)</p>
             </li>
@@ -295,11 +337,11 @@
           <p class="copyright">© 2010–2021 Компания «Техномарт»<br>
             Все права защищены</p>
           <section class="socials">
-            <h2>Техномарт в соцсетях</h2>
+            <h2 class="visually-hidden">Техномарт в соцсетях</h2>
             <ul class="socials-list">
-              <li><a href="#">Вконтакте</a></li>
-              <li><a href="#">Фейсбук</a></li>
-              <li><a href="#">Инстаграм</a></li>
+              <li><a class="socials-vk" href="#">Вконтакте</a></li>
+              <li><a class="socials-fb" href="#">Фейсбук</a></li>
+              <li><a class="socials-inst" href="#">Инстаграм</a></li>
             </ul>
           </section>
           <p class="email">
@@ -352,6 +394,6 @@
         <button class="btn btn-close" type="button">Продолжить покупки</button>
       </div>
     </section>
-    <script src="js/some-script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
