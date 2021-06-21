@@ -151,7 +151,10 @@
   box-sizing: border-box;
   display: block;
   min-height: 38px;
-  padding: 10px;
+  padding-top: 11px;
+  padding-right: 9px;
+  padding-bottom: 9px;
+  padding-left: 9px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -464,8 +467,8 @@
 .authorization a {
   display: flex;
   align-items: center;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 11px;
+  padding-bottom: 13px;
   font-size: 21px;
   line-height: 21px;
   text-align: center;
@@ -492,7 +495,7 @@
 
 .authorization .sign-up {
   padding-right: 24px;
-  padding-left: 24px;
+  padding-left: 25px;
 }
 
 .authorization a:hover {
@@ -524,6 +527,7 @@
   padding: 0;
   font-size: 18px;
   background-color: var(--basic-sapphire);
+  box-shadow: inset 0px -5px 0px var(--basic-sapphire-dark);
 }
 
 .site-navigation a {
@@ -670,7 +674,7 @@
 .pop-goods-slider-item header {
   box-sizing: border-box;
   height: 39.47368421%;
-  padding-top: 23px;
+  padding-top: 22px;
   padding-right: 24px;
   padding-left: 24px;
   margin-bottom: auto;
@@ -767,8 +771,6 @@
 .slider-controls button.active {
 }
 
-/* Такая шапка с бледно-оранжевым фоном есть у двух секций. */
-
 .section-header {
   display: flex;
   padding-top: 25px;
@@ -791,7 +793,7 @@
 
 /* Популярные товары (4 перфоратора). */
 .popular-goods {
-  margin-bottom: 70px;
+  margin-bottom: 65px;
 }
 
 .pop-goods-list {
@@ -806,6 +808,7 @@
 .catalog-item {
   position: relative;
   display: flex;
+  box-sizing: border-box;
   flex-direction: column;
   min-height: 318px;
   align-items: center;
@@ -826,7 +829,7 @@
 .catalog-item .picture-and-actions {
   width: 100%;
   height: 169px;
-  margin-bottom: 8px;
+  margin-bottom: 7px;
   order: -1;
   position: relative;
 }
@@ -871,14 +874,31 @@
 }
 
 .catalog-item .new-price {
+  position: relative;
   display: block;
   box-sizing: border-box;
-  min-width: 141px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 32px;
+  min-width: 121px;
+  padding: 10px;
+  padding-left: 15px;
+  margin-left: -5px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  text-align: center;
   color: var(--basic-white);
   background-color: var(--basic-red);
+}
+
+.catalog-item .new-price::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 20px;
+  height: 38px;
+
+  background-image: url("../img/interface-icons/new-price-after.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 /* Блок с кнопками который должен появляться при наведении. */
@@ -1010,7 +1030,7 @@
 .services h2 {
   grid-column: 1 / -1;
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 5px;
 }
 
 .services .services-text {
@@ -1018,7 +1038,7 @@
   justify-self: start;
   width: 395px;
   margin-top: 0;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
 }
 
 /* Блок кнопок управления слайдером. */
