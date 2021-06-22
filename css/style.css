@@ -768,9 +768,6 @@
   flex-wrap: wrap;
 }
 
-.slider-controls button.active {
-}
-
 .section-header {
   display: flex;
   padding-top: 25px;
@@ -793,7 +790,7 @@
 
 /* Популярные товары (4 перфоратора). */
 .popular-goods {
-  margin-bottom: 65px;
+  margin-bottom: 70px;
 }
 
 .pop-goods-list {
@@ -812,7 +809,7 @@
   flex-direction: column;
   min-height: 318px;
   align-items: center;
-  padding-bottom: 21px;
+  padding-bottom: 20px;
   background-color: var(--basic-white);
   border: 1px solid var(--card-border-color);
   overflow: hidden;
@@ -837,6 +834,10 @@
 .picture-and-actions img {
   max-width: 100%;
   max-height: 100%;
+}
+
+.catalog-item h3 {
+  line-height: 20px;
 }
 
 .catalog-item .link-title {
@@ -867,7 +868,7 @@
 
 .catalog-item .old-price {
   display: block;
-  margin-bottom: 13px;
+  margin-bottom: 14px;
   text-align: center;
   color: var(--basic-grey-dark);
   text-decoration: line-through;
@@ -877,28 +878,20 @@
   position: relative;
   display: block;
   box-sizing: border-box;
-  min-width: 121px;
-  padding: 10px;
-  padding-left: 15px;
-  margin-left: -5px;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
+  min-width: 141px;
+  padding-top: 9px;
+  padding-right: 24px;
+  padding-bottom: 11px;
+  padding-left: 12px;
+  margin-left: 10px;
+  border-radius: 3px;
   text-align: center;
   color: var(--basic-white);
   background-color: var(--basic-red);
-}
-
-.catalog-item .new-price::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -20px;
-  width: 20px;
-  height: 38px;
-
-  background-image: url("../img/interface-icons/new-price-after.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 2'%3E%3Cpath d='m0 0l1 1-1 1z'/%3E%3C/svg%3E");
+  mask-repeat: no-repeat;
+  mask-size: 10000%;
+  mask-position: right;
 }
 
 /* Блок с кнопками который должен появляться при наведении. */
@@ -1275,7 +1268,7 @@
 .goods-categories a[href]:active,
 .main-footer-phone:focus,
 .main-footer-phone:active {
-  text-decoration: underline;
+  text-decoration: none;
   opacity: 0.5;
 }
 
