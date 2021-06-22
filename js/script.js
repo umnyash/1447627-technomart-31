@@ -3,34 +3,32 @@
 let prevSlideButton = document.querySelector(".prev-slide");
 let nextSlideButton = document.querySelector(".next-slide");
 let sliderItems = document.querySelectorAll(".pop-goods-slider-item");
-//let slideButton = document.querySelectorAll(".slider-controls button");
+let slideButtons = document.querySelectorAll(".slider-controls button");
 let currentPromoSlideNumber = 0;
 
-let hidePromoSlide = function () {
-  sliderItems[currentPromoSlideNumber].classList.add("hidden");
-}
-let showPromoSlide = function () {
-  sliderItems[currentPromoSlideNumber].classList.remove("hidden");
+let changePromoSlide = function () {
+  sliderItems[currentPromoSlideNumber].classList.toggle("hidden");
+  slideButtons[currentPromoSlideNumber].classList.toggle("active");
 }
 
 prevSlideButton.onclick = function () {
-  hidePromoSlide();
+  changePromoSlide();
   if (currentPromoSlideNumber === 0) {
     currentPromoSlideNumber = sliderItems.length - 1;
   } else {
     currentPromoSlideNumber--;
   }
-  showPromoSlide();
+  changePromoSlide();
 }
 
 nextSlideButton.onclick = function () {
-  hidePromoSlide();
+  changePromoSlide();
   if (currentPromoSlideNumber === sliderItems.length - 1) {
     currentPromoSlideNumber = 0;
   } else {
     currentPromoSlideNumber++;
   }
-  showPromoSlide();
+  changePromoSlide();
 }
 
 
