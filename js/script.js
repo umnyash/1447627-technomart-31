@@ -35,7 +35,7 @@ nextSlideButton.onclick = function () {
 // Слайдер в блоке .services
 
 let servicesButtons = document.querySelectorAll(".services-button");
-let servicesListItems = document.querySelectorAll(".services-list-item");
+let servicesListItems = document.querySelectorAll(".services-item");
 let currentSlideNumber = 0;
 
 for (let i = 0; i < servicesButtons.length; i++ ) {

@@ -261,27 +261,29 @@
         <div class="container">
           <h2>Сервисы</h2>
           <p class="services-text">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-          <div class="services-buttons-box">
-            <div class="services-buttons">
-              <button class="services-button btn-delivery services-button-active" type="button">Доставка</button>
-              <button class="services-button btn-guarantee" type="button">Гарантия</button>
-              <button class="services-button btn-credit" type="button">Кредит</button>
+          <div class="services-slider">
+            <div class="services-controls">
+              <div class="services-buttons">
+                <button class="services-button btn-delivery services-button-active" type="button">Доставка</button>
+                <button class="services-button btn-guarantee" type="button">Гарантия</button>
+                <button class="services-button btn-credit" type="button">Кредит</button>
+              </div>
             </div>
+            <ul class="services-list">
+              <li class="services-item delivery">
+                <h3>Доставка</h3>
+                <p>Мы с удовольствием доставим ваш товар прямо к&nbsp;вашему подъезду совершенно бесплатно! <br>Ведь мы неплохо заработаем, <br>поднимая его на&nbsp;ваш этаж!</p>
+              </li>
+              <li class="services-item guarantee hidden">
+                <h3>Гарантия</h3>
+                <p>(текст про гарантию)</p>
+              </li>
+              <li class="services-item loan hidden">
+                <h3>Кредит</h3>
+                <p>(текст про кредит)</p>
+              </li>
+            </ul>
           </div>
-          <ul class="services-list">
-            <li class="services-list-item">
-              <h3>Доставка</h3>
-              <p>Мы с удовольствием доставим ваш товар прямо к&nbsp;вашему подъезду совершенно бесплатно! <br>Ведь мы неплохо заработаем, <br>поднимая его на&nbsp;ваш этаж!</p>
-            </li>
-            <li class="services-list-item hidden">
-              <h3>Гарантия</h3>
-              <p>(текст про гарантию)</p>
-            </li>
-            <li class="services-list-item hidden">
-              <h3>Кредит</h3>
-              <p>(текст про кредит)</p>
-            </li>
-          </ul>
         </div>
       </section>
       <div class="index-columns container">
@@ -339,9 +341,21 @@
           <section class="socials">
             <h2 class="visually-hidden">Техномарт в соцсетях</h2>
             <ul class="socials-list">
-              <li><a class="socials-vk" href="#">Вконтакте</a></li>
-              <li><a class="socials-fb" href="#">Фейсбук</a></li>
-              <li><a class="socials-inst" href="#">Инстаграм</a></li>
+              <li>
+                <a class="socials-vk" href="#">
+                  <span class="visually-hidden">Вконтакте</span>
+                </a>
+              </li>
+              <li>
+                <a class="socials-fb" href="#">
+                  <span class="visually-hidden">Фейсбук</span>
+                </a>
+              </li>
+              <li>
+                <a class="socials-inst" href="#">
+                  <span class="visually-hidden">Инстаграм</span>
+                </a>
+              </li>
             </ul>
           </section>
           <p class="email">
@@ -349,7 +363,7 @@
             <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </p>
           <p class="author">
-            Разработано:
+            Разработано &mdash;
             <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
           </p>
         </div>
