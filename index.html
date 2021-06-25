@@ -370,7 +370,8 @@
       </div>
     </footer>
     <section class="modal write-to-us">
-      <h2>Напишите нам!</h2>
+      <h2 class="visually-hidden">Напишите нам!</h2>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
       <form action="https://echo.htmlacademy.ru" method="post">
         <div class="modal-main">
           <p class="name">
@@ -393,16 +394,20 @@
           <button class="btn btn-default" type="submit">Отправить</button>
         </div>
       </form>
-      <button type="button">Закрыть</button>
     </section>
     <section class="modal our-location">
-      <h2>Расположение нашего офиса</h2>
-      <!-- Здесь будет карта -->
-      <button type="button">Закрыть</button>
+      <h2 class="visually-hidden">Расположение нашего офиса</h2>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8224465563178!2d30.315220215550593!3d59.96826866667075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1624571676934!5m2!1sru!2sru"
+        width="943" height="442" allowfullscreen
+        title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург"></iframe>
     </section>
     <section class="modal alert">
-      <h2>Товар добавлен в корзину!</h2>
-      <button type="button">Закрыть</button>
+      <header>
+        <h2>Товар добавлен в корзину!</h2>
+      </header>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
       <div class="modal-bottom">
         <a class="btn btn-default btn-make-an-order" href="#">Оформить заказ</a>
         <button class="btn btn-close" type="button">Продолжить покупки</button>

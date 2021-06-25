@@ -4,7 +4,7 @@ let prevSlideButton = document.querySelector(".prev-slide");
 let nextSlideButton = document.querySelector(".next-slide");
 let sliderItems = document.querySelectorAll(".pop-goods-slider-item");
 let slideButtons = document.querySelectorAll(".slider-controls button");
-let currentPromoSlideNumber = 0;
+let currentPromoSlideNumber = 1;
 
 let changePromoSlide = function () {
   sliderItems[currentPromoSlideNumber].classList.toggle("hidden");
@@ -29,6 +29,20 @@ nextSlideButton.onclick = function () {
     currentPromoSlideNumber++;
   }
   changePromoSlide();
+}
+
+for (let i = 0; i < slideButtons.length; i++ ) {
+  slideButtons[i].onclick = function () {
+
+    if (i === currentPromoSlideNumber) {
+      return;
+    }
+
+    changePromoSlide();
+
+    currentPromoSlideNumber = i;
+    changePromoSlide();
+  }
 }
 
 

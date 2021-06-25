@@ -671,9 +671,11 @@
   background-size: cover;
 }
 
+/* height: 39.47368421%; */
+
 .pop-goods-slider-item header {
   box-sizing: border-box;
-  height: 39.47368421%;
+  height: 39%;
   padding-top: 22px;
   padding-right: 24px;
   padding-left: 24px;
@@ -711,21 +713,24 @@
 
 .pop-goods-slider .slider-button {
   position: absolute;
-  bottom: 104px;
-  width: 22px;
-  height: 40px;
-  padding: 0;
+  bottom: 94px;
+  width: 62px;
+  height: 60px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
   border: none;
   background-color: transparent;
   cursor: pointer;
 }
 
 .pop-goods-slider .prev-slide {
-  left: 24px;
+  left: 4px;
 }
 
 .pop-goods-slider .next-slide {
-  right: 20px;
+  right: 0px;
 }
 
 .pop-goods-slider .slider-button:hover path {
@@ -741,30 +746,49 @@
 .slider-controls {
   position: absolute;
   left: calc(50% - 45px);
-  top: calc(100% - 46px);
+  top: calc(100% - 51px);
   display: flex;
-  width: 90px;
+  width: 100px;
   justify-content: center;
 }
 
 .slider-controls button {
-  width: 10px;
-  height: 10px;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
   padding: 0;
-  border: 2px solid var(--basic-white);
-  border-radius: 50%;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  background-color: var(--basic-white);
+  border: none;
+  background: radial-gradient(
+    circle closest-side,
+    var(--basic-white) 45%,
+    transparent 55%
+  );
+}
+
+.slider-controls button:not(.active) {
   cursor: pointer;
 }
 
-.slider-controls button.active {
-  background-color: var(--basic-red);
+.slider-controls button:not(.active):hover {
+  background: radial-gradient(
+    circle closest-side,
+    var(--basic-white) 30%,
+    var(--basic-red) 40%,
+    var(--basic-red) 45%,
+    transparent 60%
+  );
 }
 
-.slider-controls button:nth-child(5n + 1) {
-  margin-left: 0;
+.slider-controls button:focus,
+.slider-controls button:active,
+.slider-controls button.active {
+  background: radial-gradient(
+    circle closest-side,
+    var(--basic-red) 25%,
+    var(--basic-white) 35%,
+    var(--basic-white) 45%,
+    transparent 55%
+  );
 }
 
 .slider-controls-box {
@@ -981,8 +1005,21 @@
   filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
 }
 
+@keyframes fromTopToBottom {
+  0% {
+    transform: translateY(-105%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .catalog-item:hover .actions-with-goods {
   display: block;
+  animation-name: fromTopToBottom;
+  animation-duration: 0.1s;
+  animation-timing-function: easeOusSine;
+  animation-fill-mode: forwards;
 }
 
 /* Популярные производители. */
@@ -1105,6 +1142,7 @@
   font-weight: 700;
   color: var(--basic-white);
   background-color: var(--basic-sapphire);
+  cursor: pointer;
 }
 
 .services-buttons button:hover {
@@ -1717,10 +1755,16 @@ input[type="checkbox"]:disabled + label {
 /* Общие стили для всплывающих окон. */
 
 .modal {
+  position: relative;
   box-sizing: border-box;
   width: 620px;
   border-top: 7px solid var(--basic-red);
   background-color: var(--basic-white);
+  filter: drop-shadow(0px 4px 20px var(--basic-black-15));
+}
+
+.modal-button {
+  cursor: pointer;
 }
 
 .modal-bottom {
@@ -1740,16 +1784,50 @@ input[type="checkbox"]:disabled + label {
 }
 
 .modal label {
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 11px;
+  width: 21px;
+  height: 21px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  background-image: url(../img/interface-icons/close-icon.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
+  transition-property: transform;
+}
+
+.modal-close:hover {
+  transform: rotate(360deg);
+}
+
+.modal-close:focus,
+.modal-close:active {
+  opacity: 0.5;
 }
 
 .modal input,
 .modal textarea {
-  margin-top: 9px;
+  margin-top: 10px;
   border: 2px solid var(--basic-grey-light);
   border-radius: 2px;
-  font: inherit;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
+  line-height: 24px;
+}
+
+.modal input::placeholder,
+.modal textarea::placeholder {
+  color: var(--basic-grey-dark);
 }
 
 .modal input:focus,
@@ -1777,7 +1855,8 @@ input[type="checkbox"]:disabled + label {
 .write-to-us .modal-main {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  column-gap: 20px;
+  row-gap: 13px;
 }
 
 .write-to-us input,
@@ -1785,14 +1864,15 @@ input[type="checkbox"]:disabled + label {
   display: block;
   box-sizing: border-box;
   width: 100%;
-  padding-top: 7px;
+  padding-top: 5px;
   padding-right: 10px;
-  padding-bottom: 7px;
-  padding-left: 12px;
+  padding-bottom: 5px;
+  padding-left: 10px;
 }
 
 .write-to-us textarea {
   height: 114px;
+  padding-top: 4px;
 }
 
 .write-to-us .letter {
@@ -1813,6 +1893,63 @@ input[type="checkbox"]:disabled + label {
 
 .write-to-us button[type="submit"] {
   width: 100%;
+}
+
+.modal.our-location {
+  width: 943px;
+  height: 449px;
+}
+
+.modal.our-location iframe {
+  border: none;
+}
+
+.modal.our-location .modal-close {
+  top: 10px;
+  right: 9px;
+}
+
+.modal.alert header {
+  display: flex;
+  min-height: 123px;
+  padding: 20px;
+}
+
+.modal.alert h2 {
+  position: relative;
+  margin: auto;
+  max-width: 360px;
+}
+
+.modal.alert h2::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 34px);
+  left: 0;
+  margin-left: -95px;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background-color: var(--basic-green-pale);
+  background-image: url(../img/interface-icons/success-icon.svg);
+  background-repeat: no-repeat;
+  background-position: 51% 58%;
+}
+
+.modal.alert .modal-bottom {
+  display: flex;
+  padding-left: 42px;
+  padding-right: 40px;
+  justify-content: center;
+}
+
+.modal.alert .btn-close {
+  width: 192px;
+}
+
+.modal.alert .modal-close {
+  top: 11px;
+  right: 11px;
 }
 
 /* Кнопка "Продолжить покупки". */
