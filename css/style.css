@@ -295,7 +295,9 @@
   box-sizing: border-box;
   width: 150px;
   padding-top: 9px;
+  padding-right: 5px;
   padding-bottom: 9px;
+  padding-left: 5px;
 }
 
 .main-header-top .bookmarks,
@@ -325,39 +327,49 @@
 }
 
 .main-header-top .bookmarks {
-  position: relative;
-  padding-left: 43px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-header-top .bookmarks::before {
   content: "";
-  position: absolute;
-  top: 13px;
-  left: 20px;
+  display: block;
   width: 14px;
   height: 18px;
+  margin-top: 2px;
+  margin-right: 8px;
   background-image: url("../img/interface-icons/bookmarks-icon.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: 0.3;
 }
 
+.bookmarks .bookmarks-amount {
+  margin-left: 0.2em;
+}
+
 .main-header-top .cart {
-  position: relative;
-  padding-left: 49px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .main-header-top .cart::before {
   content: "";
-  position: absolute;
-  top: 13px;
-  left: 26px;
+  display: block;
+  margin-top: -1px;
+  margin-right: 8px;
   width: 15px;
   height: 15px;
   background-image: url("../img/interface-icons/cart-icon.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: 0.3;
+}
+
+.cart .cart-amount {
+  margin-left: 0.2em;
 }
 
 .main-header-top .bookmarks:hover::before,
