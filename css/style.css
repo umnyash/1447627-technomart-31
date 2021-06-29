@@ -1657,7 +1657,7 @@
   width: 14px;
   height: 12px;
   transition-duration: 120ms;
-  transition-timing-function: easeInSine;
+  transition-timing-function: ease-in;
   transition-property: top, left, width, height;
 }
 
