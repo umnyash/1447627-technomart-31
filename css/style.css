@@ -1653,19 +1653,19 @@
 
 .breadcrumbs-item .home-icon {
   position: absolute;
-  top: 17px;
   width: 14px;
   height: 12px;
-  transition-duration: 120ms;
+  margin-top: 4px;
+  transition-duration: 80ms;
   transition-timing-function: ease-in;
-  transition-property: top, left, width, height;
+  transition-property: width, height, margin-top, margin-left;
 }
 
 .to-index:hover .home-icon {
-  left: -1px;
-  top: 15px;
   width: 18px;
   height: 15px;
+  margin-top: 2px;
+  margin-left: -1px;
 }
 
 .to-index:hover .home-icon-roof,
