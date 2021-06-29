@@ -1914,10 +1914,10 @@
   left: -31px;
   width: 9px;
   height: 9px;
-  border: 4px solid transparent;
+  padding: 4px;
   border-radius: 50%;
-  outline: 4px solid var(--basic-grey-light);
   background-clip: content-box;
+  box-shadow: 0 0 0 4px var(--basic-grey-light);
 }
 
 .source-types-input:checked + label::before {
@@ -1925,37 +1925,32 @@
 }
 
 .source-types-input + label:hover::before {
-  outline-color: var(--basic-grey);
+  box-shadow: 0 0 0 4px var(--basic-grey);
 }
 
 .source-types-input:checked + label:hover::before {
-  outline-color: var(--basic-grey);
   background-color: var(--basic-grey);
-}
-
-.source-types-input + label:hover::before {
-  outline-color: var(--basic-grey);
+  box-shadow: 0 0 0 4px var(--basic-grey);
 }
 
 .source-types-input:checked:focus + label::before {
-  outline-color: var(--basic-sapphire-light);
   background-color: var(--basic-sapphire-light);
+  box-shadow: 0 0 0 4px var(--basic-sapphire-light);
 }
+/*
 
-.source-types-input:focus + label::before {
-  outline-color: var(--basic-sapphire-light);
-}
-
+/*
 .manufacturers-input:disabled + label,
 .source-types-input:disabled + label {
   opacity: 0.4;
 }
-
+/*
 .manufacturers-input:disabled + label::before,
 .source-types-input:disabled + label::before {
   background-color: var(--basic-grey);
   opacity: 0.3;
 }
+*/
 
 .catalog-btn[type="submit"],
 .paginator a {
