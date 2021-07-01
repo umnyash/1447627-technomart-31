@@ -1412,7 +1412,7 @@
 
 .main-footer-bottom .container {
   display: flex;
-  padding-top: 33px;
+  padding-top: 31px;
   padding-bottom: 34px;
   align-items: center;
 }
@@ -1422,15 +1422,18 @@
 }
 
 .main-footer-bottom .copyright {
-  margin-right: auto;
+  min-width: 263px;
+  margin-top: 2px;
+  margin-right: 60px;
   margin-left: 1px;
   line-height: 19px;
 }
 
 .main-footer-bottom .socials {
-  margin-top: 2px;
-  margin-right: 120px;
-  margin-left: 50px;
+  margin-top: 4px;
+  margin-right: auto;
+  margin-left: auto;
+  flex-shrink: 0;
 }
 
 .main-footer-bottom .socials-list {
@@ -1438,7 +1441,6 @@
   min-width: 135px;
   padding: 0;
   margin: 0;
-  flex-shrink: 0;
   list-style: none;
   flex-wrap: wrap;
 }
@@ -1463,8 +1465,9 @@
   background-image: url(../img/social-icons/vk.svg);
 }
 
-.socials-fb {
+a.socials-fb {
   background-image: url(../img/social-icons/facebook.svg);
+  background-position: center top 10px;
 }
 
 .socials-inst {
@@ -1483,12 +1486,13 @@
 }
 
 .main-footer-bottom .email {
-  width: 150px;
+  min-width: 150px;
   margin-right: 38px;
+  margin-left: 50px;
 }
 
 .main-footer-bottom .author {
-  width: 111px;
+  min-width: 111px;
 }
 
 .email a,

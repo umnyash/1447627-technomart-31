@@ -1,3 +1,5 @@
+"use strict";
+
 // Слайдер в блоке .promo
 
 let prevSlideButton = document.querySelector(".prev-slide");
