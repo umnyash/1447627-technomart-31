@@ -2215,7 +2215,7 @@ a.socials-fb {
   transform: rotate(360deg);
 }
 
-.modal-close:focus,
+.modal-close:focus-visible,
 .modal-close:active {
   opacity: 0.5;
 }
