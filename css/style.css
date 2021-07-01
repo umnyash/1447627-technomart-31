@@ -779,7 +779,7 @@
   fill: var(--basic-red);
 }
 
-.pop-goods-slider .slider-button:focus path,
+.pop-goods-slider .slider-button:focus-visible path,
 .pop-goods-slider .slider-button:active path {
   fill: var(--basic-black);
   opacity: 0.3;
@@ -811,7 +811,7 @@
   cursor: pointer;
 }
 
-.slider-controls button:not(.active):hover {
+.slide-button:not(.active):hover {
   background: radial-gradient(
     circle closest-side,
     var(--basic-white) 30%,
@@ -821,9 +821,9 @@
   );
 }
 
-.slider-controls button:focus,
-.slider-controls button:active,
-.slider-controls button.active {
+.slider-controls button.slide-button:focus-visible,
+.slider-controls button.slide-button:active,
+.slider-controls button.slide-button.active {
   background: radial-gradient(
     circle closest-side,
     var(--basic-red) 25%,
@@ -1176,7 +1176,7 @@
   background-color: var(--basic-sapphire-dark);
 }
 
-.services-buttons button:focus,
+.services-buttons button:focus-visible,
 .services-buttons button:active,
 .services-buttons button.services-button-active {
   color: var(--basic-sapphire);
