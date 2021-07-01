@@ -1652,7 +1652,7 @@ a.socials-fb {
   right: -25px;
   width: 8px;
   height: 12px;
-  background-image: url("../img/interface-icons/breadcrumbs-arrow-icon.svg");
+  background-image: url("data:image/svg+xml,%3Csvg width='8' height='12' viewBox='0 0 8 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.237 5.69313L1.729 0.971129C1.53129 0.801657 1.21072 0.801657 1.013 0.971129C0.815286 1.1406 0.815286 1.41537 1.013 1.58484L6.163 5.99999L1.012 10.4143C0.826486 10.5855 0.832107 10.8518 1.02473 11.0171C1.21735 11.1824 1.52801 11.1876 1.728 11.0288L7.237 6.30684C7.33252 6.22572 7.38625 6.11524 7.38625 5.99999C7.38625 5.88473 7.33252 5.77425 7.237 5.69313Z' fill='%23C1C6CE'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -2309,11 +2309,6 @@ a.socials-fb {
   border: none;
 }
 
-.modal.our-location .modal-close {
-  top: 10px;
-  right: 9px;
-}
-
 .modal.alert header {
   display: flex;
   min-height: 123px;
@@ -2336,7 +2331,7 @@ a.socials-fb {
   border-radius: 50%;
   margin-left: -95px;
   background-color: var(--basic-green-pale);
-  background-image: url(../img/interface-icons/success-icon.svg);
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='30' viewBox='0 0 40 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M35.641 1.06603C35.2498 0.677292 34.6181 0.677292 34.227 1.06603L15.788 19.504C15.3968 19.8928 14.7651 19.8928 14.374 19.504L6.23396 11.365C5.84278 10.9763 5.21114 10.9763 4.81996 11.365L1.28496 14.9C0.896225 15.2912 0.896225 15.9228 1.28496 16.314L14.374 29.404C14.7651 29.7928 15.3968 29.7928 15.788 29.404L19.324 25.868L20.738 24.454L39.176 6.01603C39.5647 5.62485 39.5647 4.99321 39.176 4.60203L35.641 1.06603Z' fill='%23ffffff'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   background-position: 51% 58%;
 }
@@ -2350,11 +2345,6 @@ a.socials-fb {
 
 .modal.alert .btn-close {
   width: 192px;
-}
-
-.modal.alert .modal-close {
-  top: 11px;
-  right: 11px;
 }
 
 .modal .btn.btn-close {
