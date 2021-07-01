@@ -801,13 +801,16 @@
   bottom: 94px;
   width: 62px;
   height: 60px;
-  padding-top: 10px;
-  padding-right: 20px;
-  padding-bottom: 10px;
-  padding-left: 20px;
+  padding: 10px;
   border: none;
-  background-color: transparent;
+  background-color: var(--basic-white);
   cursor: pointer;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='22' height='40' viewBox='0 0 22 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.9244 0.941467L21.9225 2.98927L4.90696 20.4361L21.978 37.9376L19.9789 39.9854L0.910614 20.4361L19.9244 0.941467Z' fill='%23000000'/%3E%3C/svg%3E%0A");
+  mask-image: url("data:image/svg+xml,%3Csvg width='22' height='40' viewBox='0 0 22 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.9244 0.941467L21.9225 2.98927L4.90696 20.4361L21.978 37.9376L19.9789 39.9854L0.910614 20.4361L19.9244 0.941467Z' fill='%23000000'/%3E%3C/svg%3E%0A");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
 }
 
 .pop-goods-slider .prev-slide {
@@ -816,18 +819,18 @@
 
 .pop-goods-slider .next-slide {
   right: 0px;
+  transform: rotate(180deg);
 }
 
-.pop-goods-slider .slider-button:hover path {
-  fill: var(--basic-red);
+.pop-goods-slider .slider-button:hover {
+  background-color: var(--basic-red);
 }
 
-.pop-goods-slider .slider-button:focus-visible path,
-.pop-goods-slider .slider-button:active path {
-  fill: var(--basic-black);
-  opacity: 0.3;
+.pop-goods-slider .slider-button:focus-visible,
+.pop-goods-slider .slider-button:active {
+  background-color: var(--basic-red);
+  opacity: 0.5;
 }
-
 .slider-controls {
   position: absolute;
   left: calc(50% - 45px);
