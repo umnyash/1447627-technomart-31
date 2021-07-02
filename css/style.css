@@ -2047,6 +2047,7 @@ a.socials-fb {
 
 .goods-sorting {
   grid-row: 3 / 4;
+  align-self: flex-start;
   display: flex;
   padding-top: 8px;
   padding-right: 16px;
