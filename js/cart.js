@@ -11,7 +11,9 @@ if (!list) {
 let buyButtons = list.querySelectorAll(".btn-buy");
 
 for (let i = 0; i < buyButtons.length; i++) {
-  buyButtons[i].onclick = function () {
+
+  buyButtons[i].addEventListener("click", function (evt) {
+    evt.preventDefault();
 
     console.log(cartAmount.textContent);
     console.log( Boolean(cartAmount.textContent) );
@@ -21,5 +23,5 @@ for (let i = 0; i < buyButtons.length; i++) {
     }
 
     cartAmount.textContent++;
-  }
+  });
 }
