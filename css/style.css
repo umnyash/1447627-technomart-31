@@ -1598,7 +1598,7 @@ a.socials-fb {
 .main-content {
   display: grid;
   grid-template-columns: 220px 1fr;
-  grid-template-rows: repeat(4, min-content);
+  grid-template-rows: repeat(3, min-content) 1fr;
   gap: 20px;
   margin-bottom: 54px;
 }
@@ -1866,7 +1866,7 @@ a.socials-fb {
 
 .goods-filter-form .goods-filter-manufacturers {
   padding-bottom: 25px;
-  margin-bottom: 17px;
+  margin-bottom: 18px;
 }
 
 .goods-filter-manufacturers legend {
@@ -1883,7 +1883,7 @@ a.socials-fb {
 }
 
 .manufacturers-item:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 }
 
 .manufacturers-item label::before {
@@ -2073,18 +2073,18 @@ a.socials-fb {
 .goods-sorting-criterions-list {
   display: flex;
   margin: 0;
-  margin-right: 42px;
+  margin-right: 40px;
   margin-left: 46px;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .goods-sorting-criterions-list li:not(:first-child) {
-  margin-left: 56px;
+  margin-left: 52px;
 }
 
 .goods-sorting-criterions-list li:nth-child(2) {
-  margin-left: 62px;
+  margin-left: 60px;
 }
 
 .goods-sorting-criterions-list .catalog-btn {
