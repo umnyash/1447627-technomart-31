@@ -166,6 +166,7 @@
 
 .page-body .sticker-new {
   margin: 0;
+  z-index: 1;
 }
 
 .page-body .btn-default,
