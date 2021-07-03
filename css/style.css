@@ -2056,9 +2056,9 @@ a.socials-fb {
   grid-row: 3 / 4;
   align-self: flex-start;
   display: flex;
-  padding-top: 8px;
+  padding-top: 5px;
   padding-right: 16px;
-  padding-bottom: 9px;
+  padding-bottom: 4px;
   padding-left: 19px;
   border-radius: 3px;
   margin-bottom: 8px;
@@ -2067,27 +2067,34 @@ a.socials-fb {
 
 .goods-sorting h2 {
   margin: 0;
+  margin-top: -1px;
   margin-right: auto;
 }
 
 .goods-sorting-criterions-list {
   display: flex;
   margin: 0;
-  margin-right: 40px;
+  margin-right: 46px;
   margin-left: 46px;
   justify-content: center;
   flex-wrap: wrap;
 }
 
+.goods-sorting-criterions-list li {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 .goods-sorting-criterions-list li:not(:first-child) {
-  margin-left: 52px;
+  margin-left: 64px;
 }
 
 .goods-sorting-criterions-list li:nth-child(2) {
-  margin-left: 60px;
+  margin-left: 70px;
 }
 
 .goods-sorting-criterions-list .catalog-btn {
+  padding: 0;
   border: none;
   border-bottom: 1px dotted var(--basic-red);
   background-color: transparent;
@@ -2110,7 +2117,7 @@ a.socials-fb {
 .goods-sorting-directions-list {
   display: flex;
   margin: 0;
-  margin-top: 2px;
+  margin-top: -1px;
 }
 
 .goods-sorting-directions-list li {
