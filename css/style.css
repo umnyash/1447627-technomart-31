@@ -2166,11 +2166,13 @@ a.socials-fb {
 /* Общие стили для всплывающих окон. */
 
 .modal {
-  position: fixed;
+  position: relative;
+  /*
   top: 120px;
   right: 0;
   bottom: auto;
   left: 0;
+  */
   box-sizing: border-box;
   width: 620px;
   margin: auto;
