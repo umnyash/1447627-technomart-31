@@ -313,7 +313,7 @@
           <p>Вы можете забрать товар сами, <br>заехав в&nbsp;наш офис:</p>
           <img src="img/address.png" width="300" height="158"
             alt="Расположение офиса на карте по адресу: г. Санкт-Петербург, наб. Реки Карповки, 5 лит П.">
-          <a class="btn btn-default" href="#">Заблудились? Напишите нам!</a>
+          <a class="btn btn-default write-message" href="#">Заблудились? Напишите нам!</a>
         </section>
       </div>
     </main>
@@ -377,11 +377,11 @@
         </div>
       </div>
     </footer>
-    <section class="modal write-to-us">
+    <section class="modal write-to-us hidden">
       <h2 class="visually-hidden">Напишите нам!</h2>
       <button class="modal-close" type="button">
-	    <span class="visually-hidden">Закрыть.</span>
-	  </button>
+	      <span class="visually-hidden">Закрыть.</span>
+	    </button>
       <form action="https://echo.htmlacademy.ru" method="post">
         <div class="modal-main">
           <p class="name">
@@ -391,12 +391,12 @@
           </p>
           <p class="email">
             <label>Ваш e-mail:
-              <input type="email" name="user-email" placeholder="email@example.com" required>
+              <input type="email" name="user-email" placeholder="email@example.com">
             </label>
           </p>
           <p class="letter">
             <label>Текст письма:
-              <textarea name="user-message" placeholder="В свободной форме" required></textarea>
+              <textarea name="user-message" placeholder="В свободной форме"></textarea>
             </label>
           </p>
         </div>
@@ -405,7 +405,7 @@
         </div>
       </form>
     </section>
-    <section class="modal our-location">
+    <section class="modal our-location hidden">
       <h2 class="visually-hidden">Расположение нашего офиса</h2>
       <button class="modal-close" type="button">
 	    <span class="visually-hidden">Закрыть.</span>
@@ -415,7 +415,7 @@
         width="943" height="442" allowfullscreen
         title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург"></iframe>
     </section>
-    <section class="modal alert">
+    <section class="modal alert hidden">
       <header>
         <h2>Товар добавлен в корзину!</h2>
       </header>
@@ -427,7 +427,8 @@
         <button class="btn btn-close" type="button">Продолжить покупки</button>
       </div>
     </section>
-    <script src="js/script.js"></script>
-    <script src="js/cart.js"></script>
+    <script src="js/script-1.js"></script>
+    <script src="js/script-2.js"></script>
+    <script src="js/message.js"></script>
   </body>
 </html>
