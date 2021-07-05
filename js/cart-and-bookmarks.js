@@ -1,7 +1,3 @@
-"use strict";
-
-// Пополнение корзины и закладок
-
 const cart = document.querySelector(".cart");
 const cartAmount = cart.querySelector(".cart-amount");
 const bookmarks = document.querySelector(".bookmarks");
@@ -43,14 +39,24 @@ for (let i = 0; i < buyButtons.length; i++) {
 
 
 // Закрытие модального окна, сообщающего о добавлении в корзину.
+// крестиком
 closeAlert.addEventListener("click", function (evt) {
   evt.preventDefault();
 
   alert.classList.add("hidden");
 });
-
+// кнопкой "продолжить покупки"
 closeAlert2.addEventListener("click", function (evt) {
   evt.preventDefault();
 
   alert.classList.add("hidden");
+});
+// кнопкой Esc
+window.addEventListener("keydown", function (evt) {
+  if (evt.key === "Esc" || evt.key === "Escape") {
+    if (!alert.classList.contains("hidden")) {
+      evt.preventDefault();
+      alert.classList.add("hidden");
+    }
+  }
 });

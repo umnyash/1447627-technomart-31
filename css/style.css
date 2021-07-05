@@ -1347,11 +1347,54 @@
   margin-bottom: 33px;
 }
 
-.contacts img {
+.contacts .open-map {
+  display: block;
+  margin-bottom: 25px;
+}
+
+.contacts .open-map:hover {
+  outline: 1px solid var(--basic-red);
+}
+
+.contacts .open-map:focus,
+.contacts .open-map:active {
+  outline: 1px solid var(--basic-red-dark);
+}
+
+.open-map:focus img,
+.open-map:active img {
+  filter: brightness(93%);
+}
+
+.open-map.map-js:hover {
+  animation: jump 120ms;
+}
+
+@keyframes jump {
+  10% {
+    transform: translateY(-1px);
+  }
+  30% {
+    transform: translateY(-3px) rotate(5deg);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  80% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+.open-map img {
   display: block;
   max-width: 100%;
-  height: auto;
-  margin-bottom: 25px;
+  height: 158px;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
 }
 
 .contacts .btn {
@@ -2176,7 +2219,7 @@ a.socials-fb {
 .modal {
   position: fixed;
   z-index: 2;
-  top: 0px;
+  top: 70px;
   right: 0;
   bottom: auto;
   left: 0;
