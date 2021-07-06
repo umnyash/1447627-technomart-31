@@ -2371,6 +2371,30 @@ a.socials-fb {
   height: 449px;
 }
 
+.our-location .modal-close {
+  z-index: 1;
+}
+
+.our-location .map-box {
+  position: relative;
+  width: 943px;
+  height: 442px;
+  overflow: hidden;
+}
+
+.map-box .static-map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  max-width: 100%;
+  height: 442px;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+  z-index: -1;
+}
+
 .modal.our-location iframe {
   border: none;
 }
