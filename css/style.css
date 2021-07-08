@@ -1826,6 +1826,7 @@ a.socials-fb {
 }
 
 .goods-filter-price input {
+  vertical-align: middle;
   display: inline-block;
   box-sizing: border-box;
   width: 95px;
