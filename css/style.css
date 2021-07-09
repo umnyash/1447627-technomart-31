@@ -30,14 +30,6 @@
 }
 
 @font-face {
-  font-family: "Cuprum";
-  font-style: italic;
-  font-weight: 700;
-  src: url("../fonts/cuprumbolditalic.woff2") format("woff2"),
-    url("../fonts/cuprumbolditalic.woff") format("woff");
-}
-
-@font-face {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
